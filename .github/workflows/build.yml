@@ -14,4 +14,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: MyJar
-          path: build/libs/*.jar      
+          path: build/libs/*.jar
