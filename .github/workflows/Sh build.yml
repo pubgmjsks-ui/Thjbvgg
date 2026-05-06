@@ -1,0 +1,4 @@
+- name: Permission fix
+        run: chmod +x gradlew
+      - name: Build with Gradle
+        run: sh gradlew build --no-daemon
