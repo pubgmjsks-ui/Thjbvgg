@@ -1,13 +1,15 @@
 {
   "schemaVersion": 1,
-  "id": "yakushaclient",
-  "version": "1.0",
-  "name": "Yakusha Client",
-  "mixins": [],
+  "id": "yakushamod",
+  "version": "1.0.0",
+  "name": "Yakusha Mod",
   "entrypoints": {
-    "client": ["com.yakusha.client.YakushaMod"]
+    "main": [
+      "net.yakusha.mod.Main"
+    ]
   },
   "depends": {
-    "fabric": "*"
+    "fabricloader": ">=0.11.3",
+    "minecraft": "1.16.5"
   }
 }
