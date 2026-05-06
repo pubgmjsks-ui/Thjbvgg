@@ -8,6 +8,8 @@ targetCompatibility = JavaVersion.VERSION_17
 repositories {
     maven { url "https://maven.fabricmc.net/" }
     maven { url "https://maven.terraformersmc.com/releases/" }
+    maven { url "https://jitpack.io" }
+    maven { url "https://repo.maven.apache.org/maven2/" }
     mavenCentral()
 }
 
@@ -16,8 +18,8 @@ dependencies {
     mappings "net.fabricmc:yarn:1.16.5+build.1:v2"
     modImplementation "net.fabricmc:fabric-loader:0.11.3"
     
-    // Используем стабильную версию API для 1.16.5
-    modImplementation "net.fabricmc.fabric-api:fabric-api:0.35.2+1.16"
+    // МЫ ЗАМЕНИЛИ ВЕРСИЮ НА 0.42.0. Она точно доступна и исправит ошибку из лога 106176
+    modImplementation "net.fabricmc.fabric-api:fabric-api:0.42.0+1.16"
 }
 
 processResources {
