@@ -1,21 +1,10 @@
-buildscript {
-    repositories {
-        maven { url "https://maven.fabricmc.net/" }
-        mavenCentral()
-    }
-    dependencies {
-        classpath "net.fabricmc:fabric-loom:0.10-SNAPSHOT"
-    }
+plugins {
+    id 'fabric-loom' version '0.10-SNAPSHOT'
 }
-
-apply plugin: "fabric-loom"
-apply plugin: "maven-publish"
-
-sourceCompatibility = JavaVersion.VERSION_17
-targetCompatibility = JavaVersion.VERSION_17
 
 repositories {
     maven { url "https://maven.fabricmc.net/" }
+    maven { url "https://maven.terraformersmc.com/releases/" }
     mavenCentral()
 }
 
@@ -23,5 +12,7 @@ dependencies {
     minecraft "com.mojang:minecraft:1.16.5"
     mappings "net.fabricmc:yarn:1.16.5+build.1:v2"
     modImplementation "net.fabricmc:fabric-loader:0.11.3"
+    
+    // Исправленная версия API
     modImplementation "net.fabricmc.fabric-api:fabric-api:0.35.2+1.16"
 }
