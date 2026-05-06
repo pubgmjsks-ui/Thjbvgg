@@ -9,10 +9,12 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      - run: chmod +x gradlew
-      - run: ./gradlew build
-      - uses: actions/upload-artifact@v4
+      - name: Fix gradlew permissions
+        run: chmod +x gradlew
+      - name: Build with Gradle
+        run: ./gradlew build --no-daemon
+      - name: Upload result
+        uses: actions/upload-artifact@v4
         with:
           name: MyJar
           path: build/libs/*.jar
-      
